@@ -933,7 +933,7 @@ if __name__ == '__main__':
     # 运行优化
     study.optimize(
         objective,
-        n_trials=1500,  # 试验次数，可以根据需要调整
+        n_trials=1200,  # 试验次数，可以根据需要调整
         n_jobs=16,  # 并行任务数，根据CPU核心数调整
         callbacks=[save_callback],
         show_progress_bar=True,
