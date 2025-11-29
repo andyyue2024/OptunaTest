@@ -915,7 +915,8 @@ if __name__ == '__main__':
     # 20231121-20251107:AILabxOptunaStudy3_011.db
     # 20231121-20251107:AILabxOptunaStudy3_012.db # repeat for 011.db
     # 20231121-20251121:AILabxOptunaStudy3_021.db
-    storage_url = "sqlite:///AILabxOptunaStudy3_021.db"
+    # 20231121-20251121:AILabxOptunaStudy3_022.db # repeat for 021.db, good
+    storage_url = "sqlite:///AILabxOptunaStudy3_022.db"
     study_name = "AILabxOptunaStudy"
 
     # 确保数据目录存在
@@ -933,7 +934,7 @@ if __name__ == '__main__':
     # 运行优化
     study.optimize(
         objective,
-        n_trials=1200,  # 试验次数，可以根据需要调整
+        n_trials=1000,  # 试验次数，可以根据需要调整
         n_jobs=16,  # 并行任务数，根据CPU核心数调整
         callbacks=[save_callback],
         show_progress_bar=True,
