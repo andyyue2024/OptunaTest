@@ -738,8 +738,8 @@ def run_strategy(paras: dict, trial_number: int):    # 导入上下文
         mode=MODE_BACKTEST,
         token='6860051c58995ae01c30a27d5b72000bababa8e6',  # gfgm
         # token='c8bd4de742240da9483aecd05a2f5e52900786eb',
-        backtest_start_time="2023-11-21 09:30:00",
-        backtest_end_time='2025-11-21 15:00:00',
+        backtest_start_time="2025-08-25 09:30:00",
+        backtest_end_time='2025-12-12 15:00:00',
         backtest_adjust=ADJUST_PREV,
         backtest_initial_cash=100000,
         backtest_commission_ratio=0.0005,
@@ -912,11 +912,12 @@ if __name__ == '__main__':
     # 20240301-20240601:AILabxOptunaStudy3_004.db # cautious4
     # 20241018-20250118:AILabxOptunaStudy3_005.db # cautious5
     # 20250825-20251114:AILabxOptunaStudy3_006.db # cautious6, good
+    # 20250825-20251212:AILabxOptunaStudy3_007.db # cautious7
     # 20231121-20251107:AILabxOptunaStudy3_011.db
     # 20231121-20251107:AILabxOptunaStudy3_012.db # repeat for 011.db
     # 20231121-20251121:AILabxOptunaStudy3_021.db
     # 20231121-20251121:AILabxOptunaStudy3_022.db # repeat for 021.db, good
-    storage_url = "sqlite:///AILabxOptunaStudy3_022.db"
+    storage_url = "sqlite:///AILabxOptunaStudy3_007.db"
     study_name = "AILabxOptunaStudy"
 
     # 确保数据目录存在
@@ -934,7 +935,7 @@ if __name__ == '__main__':
     # 运行优化
     study.optimize(
         objective,
-        n_trials=1000,  # 试验次数，可以根据需要调整
+        n_trials=11000,  # 试验次数，可以根据需要调整
         n_jobs=16,  # 并行任务数，根据CPU核心数调整
         callbacks=[save_callback],
         show_progress_bar=True,
